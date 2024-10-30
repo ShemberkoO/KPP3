@@ -1,0 +1,16 @@
+[
+  {
+    "orderID": 1,
+    "client": {
+      "firstName": "Іван",
+      "lastName": "Іванов"
+    }
+  },
+  {
+    "orderID": 2,
+    "client": {
+      "firstName": "Марія",
+      "lastName": "Петренко"
+    }
+  }
+]

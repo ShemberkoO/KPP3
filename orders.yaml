@@ -1,0 +1,24 @@
+- !!Models.Order
+  client:
+    firstName: Іван
+    lastName: Іванов
+  dishes:
+  - cost: 150.5
+    id: 101
+    name: Піца
+    weightInGrams: 500
+  - cost: 70.3
+    id: 102
+    name: Салат
+    weightInGrams: 200
+  orderID: 1
+- !!Models.Order
+  client:
+    firstName: Марія
+    lastName: Петренко
+  dishes:
+  - cost: 30.0
+    id: 103
+    name: Сік
+    weightInGrams: 250
+  orderID: 2
