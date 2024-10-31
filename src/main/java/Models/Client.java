@@ -26,4 +26,9 @@ public class Client implements Serializable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    @Override
+    public String toString() {
+        return "Client [firstName=" + firstName + ", lastName=" + lastName + "]";
+    }
 }

@@ -44,4 +44,9 @@ public class Dish implements Serializable {
     public void setWeightInGrams(int weightInGrams) {
         this.weightInGrams = weightInGrams;
     }
+
+    @Override
+    public String toString() {
+        return "Dish [id=" + id + ", name=" + name + ", cost=" + cost + ", weightInGrams=" + weightInGrams + "]";
+    }
 }

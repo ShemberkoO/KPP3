@@ -57,14 +57,16 @@ public class OrderWriteService implements IWrite<Order> {
 
     @Override
     public void WriteListToFile(List<Order> orders, String fileName) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
+        try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(fileName));
+             ObjectOutputStream oos = new ObjectOutputStream(bos)) {
+
             for (Order order : orders) {
                 oos.writeObject(order);
-
 
                 String dishFileName = "dishes_order_" + order.getOrderID() + ".txt";
                 dishesWriteService.WriteListToFile(order.getDishes(), dishFileName);
             }
+
             System.out.println("Список замовлень успішно записано у файл: " + fileName);
         } catch (IOException e) {
             System.err.println("Помилка при записі у файл: " + e.getMessage());

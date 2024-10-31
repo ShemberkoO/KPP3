@@ -27,8 +27,7 @@ public class DishesReadService implements IRead<Dish> {
                     String name = parts[1].trim();
                     double cost = Double.parseDouble(parts[2].trim().replace(',', '.'));
                     int weightInGrams = Integer.parseInt(parts[3].trim());
-
-                    // Створюємо об'єкт Dish і додаємо його до списку
+                    
                     Dish dish = new Dish(id, name, cost, weightInGrams);
                     dishes.add(dish);
                 }

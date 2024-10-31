@@ -23,7 +23,6 @@ public class DishesWriteService implements IWrite<Dish> {
     public void WriteListToFile(List<Dish> list, String fileName) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
             for (Dish dish : list) {
-                // Записуємо кожний Dish у форматі CSV: id, name, cost, weightInGrams
                 writer.printf("%d, %s, %.2f, %d%n",
                         dish.getId(),
                         dish.getName(),

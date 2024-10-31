@@ -42,4 +42,13 @@ public class Order implements Serializable {
     public void setClient(Client client) {
         this.client = client;
     }
+
+    public Order copyWithoutClient() {
+        return new Order(this.orderID, null, this.dishes);
+    }
+
+    @Override
+    public String toString() {
+        return  "Order [orderID=" + orderID + ", dishes=" + dishes + "\nClient" + client + "]";
+    }
 }
